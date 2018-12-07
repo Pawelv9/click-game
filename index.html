@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click!</button>
+
+    <script>
+        function startGame() {
+            let counter = 0;
+
+            document.querySelector('button').addEventListener('click', () => {
+                counter++;
+            });
+
+            setTimeout(() => {
+                if (counter > 5) {
+                    console.log('Victory!');
+                    console.log('Your clicks:' + counter)
+                } else {
+                    console.log('try one more time')
+                }
+            }, 2000);
+        }
+
+        startGame();
+    </script>
+</body>
+
+</html>
